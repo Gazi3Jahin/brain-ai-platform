@@ -1,0 +1,196 @@
+/* ================================
+   GLOBAL RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f9fc;
+    color: #172033;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+header {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #e6eaf0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: #2563eb;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    color: #5b6475;
+    transition: 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px 22px;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.btn.primary {
+    background: #2563eb;
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.btn.secondary {
+    border: 1px solid #d7dce5;
+    background: white;
+    color: #273248;
+}
+
+.btn.secondary:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+}
+
+
+/* ================================
+   GENERAL SECTIONS
+================================ */
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 30px;
+}
+
+.eyebrow {
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin-bottom: 18px;
+}
+
+.section-heading p:last-child {
+    color: #687386;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    border-top: 1px solid #e6eaf0;
+    padding: 30px;
+    text-align: center;
+    color: #7a8495;
+    font-size: 13px;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 18px 20px;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    section {
+        padding: 70px 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+}
