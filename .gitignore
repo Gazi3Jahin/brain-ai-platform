@@ -1,0 +1,49 @@
+# Python environment and cache
+.venv/
+__pycache__/
+*.py[cod]
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Logs and temporary files
+*.log
+.DS_Store
+Thumbs.db
+
+# Medical data and datasets
+datasets/
+data/
+uploads/
+*.nii
+*.nii.gz
+*.dcm
+
+# Model files and exports
+*.keras
+*.h5
+*.pt
+*.pth
+BrainAI_Model_Export.zip
+
+
+# All ZIP archives and exported bundles
+*.zip
+
+# MRI analysis outputs and metadata
+backend/whole_tumor_mask.nii.gz
+backend/tumor_probability.nii.gz
+backend/analysis_metadata.json
+
+# Trained model files — review before publishing
+backend/model/
+
+# Research-generated results
+research/results/
+# Generated research outputs and metrics
+research/**/results/
+# Generated analysis metadata and Python cache
+backend/analysis_metadata.json
+backend/__pycache__/
