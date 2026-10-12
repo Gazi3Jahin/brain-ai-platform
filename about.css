@@ -1,0 +1,215 @@
+.about-page {
+    min-height: 900px;
+}
+
+.about-page .section-heading {
+    margin-bottom: 45px;
+}
+
+.about-page h1 {
+    font-size: 48px;
+    letter-spacing: -1.5px;
+    margin-bottom: 15px;
+}
+
+
+/* ================================
+   CARDS
+================================ */
+
+.about-card {
+    max-width: 950px;
+
+    margin: 0 auto 20px;
+
+    padding: 32px;
+
+    background: white;
+
+    border: 1px solid #e2e7ef;
+    border-radius: 14px;
+}
+
+.about-card h2 {
+    font-size: 25px;
+    margin-bottom: 14px;
+}
+
+.about-card > p {
+    color: #687386;
+    line-height: 1.8;
+}
+
+
+/* ================================
+   LABEL
+================================ */
+
+.about-label {
+    display: block;
+
+    color: #2563eb;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+
+    margin-bottom: 10px;
+}
+
+
+/* ================================
+   INPUT FEATURES
+================================ */
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+.feature {
+    padding: 20px;
+
+    background: #f8fafc;
+
+    border-radius: 10px;
+}
+
+.feature strong {
+    display: block;
+
+    font-size: 17px;
+
+    margin-bottom: 7px;
+}
+
+.feature p {
+    color: #687386;
+    font-size: 13px;
+}
+
+
+/* ================================
+   PIPELINE
+================================ */
+
+.pipeline {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 30px;
+
+    overflow-x: auto;
+}
+
+.pipeline-step {
+    min-width: 145px;
+
+    padding: 18px;
+
+    border: 1px solid #e2e7ef;
+
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.pipeline-step span {
+    display: block;
+
+    color: #2563eb;
+
+    font-size: 11px;
+
+    margin-bottom: 7px;
+}
+
+.pipeline-step strong {
+    font-size: 14px;
+}
+
+.pipeline-arrow {
+    color: #9aa4b2;
+    font-size: 20px;
+}
+
+
+/* ================================
+   METRICS
+================================ */
+
+.metrics-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+.metrics-grid > div {
+    padding: 20px;
+
+    border: 1px solid #e2e7ef;
+
+    border-radius: 10px;
+}
+
+.metrics-grid strong,
+.metrics-grid span {
+    display: block;
+}
+
+.metrics-grid strong {
+    margin-bottom: 7px;
+}
+
+.metrics-grid span {
+    color: #687386;
+    font-size: 13px;
+}
+
+
+/* ================================
+   LIMITATIONS
+================================ */
+
+.limitations {
+    padding-left: 20px;
+
+    color: #687386;
+
+    line-height: 2;
+}
+
+.limitations li {
+    margin-bottom: 5px;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+
+    .about-page h1 {
+        font-size: 36px;
+    }
+
+    .feature-grid,
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

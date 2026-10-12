@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Model | BrainAI</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+
+
+<body>
+
+<header>
+
+    <nav>
+
+        <a href="index.html" class="logo">
+            Brain<span>AI</span>
+        </a>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+            <a href="analysis.html">Analysis</a>
+            <a href="results.html">Results</a>
+            <a href="report.html">Report</a>
+            <a href="about.html">About Model</a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+    <section class="about-page">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">
+                ABOUT THE MODEL
+            </p>
+
+            <h1>
+                Understanding the AI system
+            </h1>
+
+            <p>
+                BrainAI uses deep learning to identify and segment
+                tumor regions in multi-modal brain MRI scans.
+            </p>
+
+        </div>
+
+
+        <!-- Model Overview -->
+
+        <div class="about-card">
+
+            <span class="about-label">
+                MODEL ARCHITECTURE
+            </span>
+
+            <h2>
+                U-Net segmentation network
+            </h2>
+
+            <p>
+                The baseline model uses an encoder-decoder architecture
+                designed for pixel-level medical image segmentation.
+                Skip connections help preserve spatial information
+                between the input image and the predicted segmentation.
+            </p>
+
+        </div>
+
+
+        <!-- Input -->
+
+        <div class="about-card">
+
+            <span class="about-label">
+                INPUT DATA
+            </span>
+
+            <h2>
+                Multi-modal MRI
+            </h2>
+
+            <div class="feature-grid">
+
+                <div class="feature">
+
+                    <strong>
+                        FLAIR
+                    </strong>
+
+                    <p>
+                        Fluid-sensitive MRI modality useful for
+                        highlighting abnormal tissue.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <strong>
+                        T1
+                    </strong>
+
+                    <p>
+                        Structural MRI information used as one
+                        of the model input channels.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <strong>
+                        T1ce
+                    </strong>
+
+                    <p>
+                        Contrast-enhanced T1-weighted imaging.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <strong>
+                        T2
+                    </strong>
+
+                    <p>
+                        T2-weighted information providing
+                        complementary tissue characteristics.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Dataset -->
+
+        <div class="about-card">
+
+            <span class="about-label">
+                DATASET
+            </span>
+
+            <h2>
+                BraTS 2021
+            </h2>
+
+            <p>
+                The model is being developed using the Brain Tumor
+                Segmentation (BraTS) dataset. Each subject contains
+                multiple MRI modalities together with a reference
+                segmentation mask.
+            </p>
+
+        </div>
+
+
+        <!-- Pipeline -->
+
+        <div class="about-card">
+
+            <span class="about-label">
+                ANALYSIS PIPELINE
+            </span>
+
+            <h2>
+                From MRI to segmentation
+            </h2>
+
+            <div class="pipeline">
+
+                <div class="pipeline-step">
+                    <span>01</span>
+                    <strong>MRI Input</strong>
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-step">
+                    <span>02</span>
+                    <strong>Preprocessing</strong>
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-step">
+                    <span>03</span>
+                    <strong>U-Net</strong>
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-step">
+                    <span>04</span>
+                    <strong>Segmentation</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Metrics -->
+
+        <div class="about-card">
+
+            <span class="about-label">
+                MODEL PERFORMANCE
+            </span>
+
+            <h2>
+                Evaluation metrics
+            </h2>
+
+            <p>
+                Performance will be evaluated using segmentation-specific
+                metrics after model training.
+            </p>
+
+            <div class="metrics-grid">
+
+                <div>
+                    <strong>
+                        Dice
+                    </strong>
+
+                    <span id="dice-score">
+                        Pending
+                    </span>
+                </div>
+
+
+                <div>
+                    <strong>
+                        IoU
+                    </strong>
+
+                    <span id="iou-score">
+                        Pending
+                    </span>
+                </div>
+
+
+                <div>
+                    <strong>
+                        Precision
+                    </strong>
+
+                    <span>
+                        Pending
+                    </span>
+                </div>
+
+
+                <div>
+                    <strong>
+                        Recall
+                    </strong>
+
+                    <span>
+                        Pending
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Limitations -->
+
+        <div class="about-card">
+
+            <span class="about-label">
+                LIMITATIONS
+            </span>
+
+            <h2>
+                Important considerations
+            </h2>
+
+            <ul class="limitations">
+
+                <li>
+                    The current system is a research and educational prototype.
+                </li>
+
+                <li>
+                    Model performance depends on the characteristics
+                    of the training and input data.
+                </li>
+
+                <li>
+                    The system is not intended to provide clinical diagnosis.
+                </li>
+
+                <li>
+                    Further validation across independent clinical
+                    datasets would be required before clinical use.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        Brain AI Platform · Research & Educational Prototype
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
