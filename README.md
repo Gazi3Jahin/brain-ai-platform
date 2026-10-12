@@ -6,8 +6,7 @@ BrainAI is a research-oriented web platform designed to bring brain MRI analysis
 
 The platform explores how medical-imaging workflows and evidence-oriented information retrieval can work together to support research, improve access to relevant information, and make AI-assisted analysis easier to interact with.
 
-> **Project status:** Active research and development. The RAG component implements keyword-overlap retrieval over a local knowledge base. The currently published MRI analysis endpoint is a placeholder and does not yet execute the trained segmentation model.
-
+> **Project status:** Active research and development. The RAG component implements keyword-overlap retrieval over a local knowledge base.
 ---
 
 ## ✨ Key Features
@@ -21,8 +20,6 @@ BrainAI provides a web interface for interacting with an MRI analysis workflow.
 - Separate report page for presenting analysis-related information.
 - Frontend structure designed to connect with a Python backend.
 - A foundation for integrating trained brain-tumor segmentation models.
-
-**Current implementation note:** The published `/analyze` endpoint acknowledges the uploaded file and returns its filename and status. It does not currently perform tumor segmentation, classify a scan, or produce a clinical result. The trained model weights are not included in this repository.
 
 ### 2. 📚 RAG-Based Brain-Tumor Knowledge Assistant
 
@@ -285,8 +282,6 @@ Open `frontend/index.html` in a browser, or use the VS Code Live Preview extensi
 
 For API-backed browser interactions, configure the API base URL in the frontend JavaScript to point to the running backend. The frontend and backend must be able to communicate successfully; cross-origin browser requests may require CORS middleware in the backend.
 
-**Important:** The current `/analyze` route is only an upload placeholder. Starting the server does not automatically enable trained-model inference.
-
 ---
 
 ## 🔌 API Reference
@@ -332,8 +327,6 @@ Example response:
   "status": "ready_for_analysis"
 }
 ```
-
-The response is illustrative. The endpoint currently acknowledges the upload; it does not run segmentation or validate the medical suitability of the file.
 
 ### `GET /rag/health`
 
@@ -445,14 +438,13 @@ Model weights are not included in this repository. Reproducing the trained-model
 
 The current implementation has several important limitations:
 
-1. **MRI analysis:** The published `/analyze` endpoint acknowledges uploads but does not execute the trained model.
-2. **RAG retrieval:** Ranking is based on keyword overlap rather than semantic embeddings.
-3. **Answer generation:** The assistant retrieves passages; it does not generate new scientific answers with an LLM.
-4. **Source granularity:** Responses identify source filenames, but do not yet provide formal citations, page numbers, or passage-level document metadata.
-5. **Medical validation:** Retrieved information and future model outputs require appropriate expert review and validation.
-6. **Deployment:** The repository contains application source code, not a deployed production service.
-7. **Frontend integration:** API URLs, CORS configuration, and backend availability must be configured correctly for browser-based requests.
-8. **Model reproducibility:** Model weights and the complete inference pipeline are not packaged with the public repository.
+1. **RAG retrieval:** Ranking is based on keyword overlap rather than semantic embeddings.
+2. **Answer generation:** The assistant retrieves passages; it does not generate new scientific answers with an LLM.
+3. **Source granularity:** Responses identify source filenames, but do not yet provide formal citations, page numbers, or passage-level document metadata.
+4. **Medical validation:** Retrieved information and future model outputs require appropriate expert review and validation.
+5. **Deployment:** The repository contains application source code, not a deployed production service.
+6. **Frontend integration:** API URLs, CORS configuration, and backend availability must be configured correctly for browser-based requests.
+7. **Model reproducibility:** Model weights and the complete inference pipeline are not packaged with the public repository.
 
 These limitations define the current development stage and provide a clear path for further engineering and research.
 
@@ -462,10 +454,6 @@ These limitations define the current development stage and provide a clear path 
 
 Potential next development milestones include:
 
-- [ ] Integrate the trained U-Net model into the MRI analysis endpoint.
-- [ ] Implement input validation and MRI preprocessing.
-- [ ] Generate segmentation masks and connect the inference output to the results interface.
-- [ ] Add model-loading checks and inference error handling.
 - [ ] Improve RAG retrieval using semantic embeddings and a vector index.
 - [ ] Add more robust source metadata and passage-level citations.
 - [ ] Explore LLM-based answer generation grounded in retrieved evidence.
@@ -479,9 +467,7 @@ Potential next development milestones include:
 
 ## 🎯 Project Vision
 
-BrainAI aims to explore a practical intersection of medical imaging, deep learning, and knowledge retrieval.
-
-The long-term direction is to connect MRI analysis workflows with a transparent, evidence-oriented knowledge assistant, while keeping the components modular and making their limitations visible to users.
+BrainAI aims to explore a practical intersection of medical imaging, deep learning, and knowledge retrieval. The long-term direction is to connect MRI analysis workflows with a transparent, evidence-oriented knowledge assistant, while keeping the components modular and making their limitations visible to users.
 
 The current repository establishes the web interface, API structure, and local knowledge retrieval foundation. Future development can build on this foundation through validated model integration, stronger retrieval methods, systematic testing, and responsible deployment.
 
@@ -489,7 +475,7 @@ The current repository establishes the web interface, API structure, and local k
 
 ## 👩‍💻 Author
 
-**G.T.S. Jahin
+**G.T.S. Jahin**
 
 GitHub: [@Gazi3Jahin](https://github.com/Gazi3Jahin)
 
